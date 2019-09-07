@@ -1,7 +1,12 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav>
+      <router-link to='/'>Cards</router-link>
+      <router-link to='/mycollection'>My Collection</router-link>
+      <router-link to='/wishlist'>Wishlist</router-link>
+    </nav>
+
+    <router-view />
   </div>
 </template>
 
@@ -18,11 +23,11 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 65%;
+}
+
+nav {
+  padding: 1.5rem;
+  color: red;
 }
 </style>
