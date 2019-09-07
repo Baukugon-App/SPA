@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld />
+  <BaseLeftColumn />
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+import BaseLeftColumn from '../components/LeftColumn/BaseLeftColumn';
 
 export default {
   components: {
-    HelloWorld,
+    BaseLeftColumn,
   },
 };
 </script>
