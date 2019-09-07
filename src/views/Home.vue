@@ -1,13 +1,15 @@
 <template>
-  <BaseLeftColumn />
+  <div class="home">
+    hi
+  </div>
 </template>
 
 <script>
-import BaseLeftColumn from '../components/LeftColumn/BaseLeftColumn';
+import BaseLeftColumn from "../components/LeftColumn/BaseLeftColumn";
 
 export default {
   components: {
-    BaseLeftColumn,
-  },
+    BaseLeftColumn
+  }
 };
 </script>
