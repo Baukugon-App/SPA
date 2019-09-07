@@ -11,12 +11,17 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Cards from './components/Cards.vue'
+import MyCollection from './components/MyCollection.vue'
+import Wishlist from './components/Wishlist.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Cards,
+    MyCollection,
+    Wishlist,
   }
 }
 </script>
