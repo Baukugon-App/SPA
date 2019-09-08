@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    hi
+    <BaseLeftColumn/>
   </div>
 </template>
 
@@ -13,3 +13,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.test {
+  margin: 5rem;
+}
+</style>
