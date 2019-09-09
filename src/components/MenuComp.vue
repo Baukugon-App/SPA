@@ -32,7 +32,6 @@ export default {
   methods: {
     addItem(item) {
       this.itemsSelected.push({ title: item.title });
-      console.log(item, this.itemsSelected);
     }
   }
 };
