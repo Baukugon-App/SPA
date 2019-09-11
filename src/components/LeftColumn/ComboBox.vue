@@ -2,15 +2,15 @@
   <v-combobox
     v-model="model"
     :hide-no-data="!search"
-    :items="items"
+    :items="data"
     :search-input.sync="search"
     hide-selected
-    label="Search for an option"
-    multiple
+    :label="searchBoxText"
+    multiples
     small-chips
-    solo
+    dark
   >
-    <template v-slot:selection="{ attrs, item, parent, selected }">
+    <template dark v-slot:selection="{ attrs, item, parent, selected }">
       <v-chip
         v-if="item === Object(item)"
         v-bind="attrs"
@@ -32,10 +32,10 @@
         flat
         background-color="transparent"
         hide-details
-        solo
+        dark
         @keyup.enter="edit(index, item)"
       ></v-text-field>
-      <v-chip v-else :color= "item.color" dark label small>{{ item.text }}</v-chip>
+      <v-chip v-else :color="item.color" dark label small>{{ item.text }}</v-chip>
       <div class="flex-grow-1"></div>
     </template>
   </v-combobox>
@@ -44,30 +44,19 @@
 
 <script>
 export default {
+  props: ["searchBoxText", "data"],
   data: () => ({
     activator: null,
     attach: null,
-    colors: ["green", "purple", "indigo", "cyan", "teal", "orange"],
     editing: null,
     index: -1,
-    items: [
-      {
-        text: "Foo",
-        color: "blue"
-      },
-      {
-        text: "Bar",
-        color: "red"
-      }
-    ],
     nonce: 1,
     menu: false,
     x: 0,
     search: null,
+    model: "",
     y: 0
   }),
-
-
   methods: {
     edit(index, item) {
       if (!this.editing) {
@@ -77,7 +66,7 @@ export default {
         this.editing = null;
         this.index = -1;
       }
-    },
+    }
   }
 };
 </script>
