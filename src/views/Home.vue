@@ -1,21 +1,15 @@
 <template>
-  <div class="home">
-    <BaseLeftColumn/>
+  <div class="home test">
+    <LeftColumnContainer />
   </div>
 </template>
 
 <script>
-import BaseLeftColumn from "../components/LeftColumn/BaseLeftColumn";
+import LeftColumnContainer from "../components/LeftColumn/LeftColumnContainer";
 
 export default {
   components: {
-    BaseLeftColumn
+    LeftColumnContainer,
   }
 };
 </script>
-
-<style scoped>
-.test {
-  margin: 5rem;
-}
-</style>

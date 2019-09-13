@@ -59,8 +59,6 @@ Bakugan Elite Cards
 <style scoped>
 .container {
   background-color: darkgrey;
-  width: 15rem;
-}
-.comboBoxSize {
+  width: 19rem;
 }
 </style>
