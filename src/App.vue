@@ -1,12 +1,8 @@
 <template>
   <v-app>
     <v-content class="container">
-      <div class="pageLayout">
-        <HeaderContainer/>
-      </div>
-      <div class="pageLayout">
-        <router-view></router-view>
-      </div>
+      <HeaderContainer />
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
@@ -20,15 +16,7 @@ export default {
 };
 </script>
 <style scoped>
-.container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.pageLayout {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
+.container{
+  background-color: #FEFFFF;
 }
 </style>

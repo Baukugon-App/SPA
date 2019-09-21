@@ -8,7 +8,6 @@
     :label="searchBoxText"
     multiple
     small-chips
-    dark
   >
     <template v-slot:selection="{ attrs, item, parent, selected }">
       <v-chip
@@ -43,16 +42,5 @@ export default {
     model: [],
     y: 0
   }),
-  methods: {
-    edit(index, item) {
-      if (!this.editing) {
-        this.editing = item;
-        this.index = index;
-      } else {
-        this.editing = null;
-        this.index = -1;
-      }
-    },
-  },
 };
 </script>

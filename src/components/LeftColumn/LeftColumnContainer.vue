@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <TextBoxComp />
-    <ComboBox searchBoxText="Search by faction" v-bind:data="factions" />
-    <ComboBox searchBoxText="Search by card set" v-bind:data="cardSet" />
-    <ComboBox searchBoxText="Search by card type" v-bind:data="cardType" />
-    <ComboBox searchBoxText="Search by card rarity" v-bind:data="cardRarity" />
+    <TextBoxComp class="compStyle" />
+    <ComboBox class="compStyle" searchBoxText="Search by faction" v-bind:data="factions" />
+    <ComboBox class="compStyle" searchBoxText="Search by card set" v-bind:data="cardSet" />
+    <ComboBox class="compStyle" searchBoxText="Search by card type" v-bind:data="cardType" />
+    <ComboBox class="compStyle" searchBoxText="Search by card rarity" v-bind:data="cardRarity" />
   </div>
 </template>
 
@@ -47,18 +47,14 @@ export default {
 };
 </script>
 
-
-(Search Cards by Rarity)
-Common Cards
-Rare Cards
-Super Rare Cards
-Awesome Rare Cards
-Bakugan Elite Cards
-
-
 <style scoped>
 .container {
-  background-color: darkgrey;
+  background-color: #DEF2F1;
   width: 19rem;
+}
+.compStyle{
+  display: flex;
+  justify-content: center;
+  height: 8rem;
 }
 </style>

@@ -4,12 +4,12 @@
       <v-col>
         <v-text-field
           single-line
-          dark
           v-model="cardName"
           label="Search Card Name"
           outlined
           clearable
           @input="log(cardName)"
+          class="font"
         ></v-text-field>
       </v-col>
     </v-container>
@@ -33,6 +33,7 @@ export default {
 
 <style scoped>
 .font {
-  font-size: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
 }
 </style>
