@@ -1,6 +1,6 @@
 <template>
  <header class="header">
-     <h1 @click=" " class="container">Home</h1>
+     <h1 class="container">Home</h1>
      <h1 class="container">Cards</h1>
      <h1 class="container">About</h1>
  </header>
