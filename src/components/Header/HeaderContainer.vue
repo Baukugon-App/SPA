@@ -1,11 +1,4 @@
 <template>
-<<<<<<< HEAD
- <header class="header">
-     <h1 class="container">Home</h1>
-     <h1 class="container">Cards</h1>
-     <h1 class="container">About</h1>
- </header>
-=======
   <nav>
     <ul>
       <li>
@@ -19,7 +12,6 @@
       </li>
     </ul>
   </nav>
->>>>>>> ceada9c45ac9a305f4c95b160e6f5fc44be050b2
 </template>
 
 <style scoped>

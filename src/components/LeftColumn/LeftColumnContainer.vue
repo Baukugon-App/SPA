@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <TextBoxComp class="compStyle" />
-    <ComboBox class="compStyle" searchBoxText="Search by faction" v-bind:data="factions" />
-    <ComboBox class="compStyle" searchBoxText="Search by card set" v-bind:data="cardSet" />
-    <ComboBox class="compStyle" searchBoxText="Search by card type" v-bind:data="cardType" />
-    <ComboBox class="compStyle" searchBoxText="Search by card rarity" v-bind:data="cardRarity" />
+    <ComboBox class="compStyle" searchBoxText="Search by faction" v-bind:data="factions"  v-on:dataChanged="setFactions($event)"/>
+    <ComboBox class="compStyle" searchBoxText="Search by card set" v-bind:data="cardSet" v-on:dataChanged="setCardSet($event)" />
+    <ComboBox class="compStyle" searchBoxText="Search by card type" v-bind:data="cardType" v-on:dataChanged="setCardType($event)" />
+    <ComboBox class="compStyle" searchBoxText="Search by card rarity" v-bind:data="cardRarity" v-on:dataChanged="setCardRarity($event)" />
   </div>
 </template>
 
@@ -43,16 +43,26 @@ export default {
         { text: "Super Rare" }
       ]
     };
+  },
+  methods: {
+    setFactions: function(factions) {
+      this.$store.dispatch('setFactions', factions);
+    }
+  },
+  computed: {
+    getFactions() {
+      return this.$store.state.selectedFactions;
+    }
   }
 };
 </script>
 
 <style scoped>
 .container {
-  background-color: #DEF2F1;
+  background-color: #def2f1;
   width: 19rem;
 }
-.compStyle{
+.compStyle {
   display: flex;
   justify-content: center;
   height: 8rem;

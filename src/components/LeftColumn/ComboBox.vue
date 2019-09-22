@@ -8,6 +8,7 @@
     :label="searchBoxText"
     multiple
     small-chips
+    v-on:input="setSelectedData"
   >
     <template v-slot:selection="{ attrs, item, parent, selected }">
       <v-chip
@@ -42,5 +43,10 @@ export default {
     model: [],
     y: 0
   }),
+  methods: {
+    setSelectedData: function() {
+      this.$emit('dataChanged', this.model);
+    }
+  }
 };
 </script>
